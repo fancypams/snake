@@ -3,7 +3,6 @@ body {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #efefef;
-    overflow: hidden;
 }
 
 .start {
@@ -66,21 +65,22 @@ body {
     display: none;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 600px) {
     .grid {
-        width: 250px;
-        height: 250px;
+        width: 350px;
+        height: 450px;
     }
     .btn-wrapper {
         display: block;
         margin: 30px auto;
+        text-align: center;
     }
     .side-wrapper {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
-        width: 300px;
+        max-width: 300px;
+        min-width: 200px;
         justify-content: center;
-        margin-left: -20px;
     }
     .up p {
         transform: rotate(180deg);
@@ -93,7 +93,7 @@ body {
     }
     .left,
     .right {
-        margin: 5px 30px;
+        margin: 5px auto;
     }
     .left,
     .right,
@@ -101,11 +101,76 @@ body {
     .down {
         font-size: 35px;
         color: white;
-        height: 50px;
-        width: 50px;
+        height: 40px;
+        width: 40px;
         background-color: black;
         border-radius: 10px;
-        line-height: 50px;
+        line-height: 40px;
+        box-shadow: 3px 3px rgba(68, 68, 68, .3);
+        border: 3px solid rgba(68, 68, 68, .8);
+    }
+    .left:hover,
+    .right:hover,
+    .up:hover,
+    .down:hover {
+        cursor: pointer;
+        background-color: gray;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+    .landscape-mode {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .screen {
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    .controllers {
+        margin: auto 0 auto 70px;
+    }
+    .grid {
+        width: 400px;
+        height: 350px;
+    }
+    .btn-wrapper {
+        display: block;
+        margin: 30px auto;
+        text-align: center;
+    }
+    .side-wrapper {
+        display: inline-flex;
+        flex-wrap: wrap;
+        max-width: 300px;
+        min-width: 200px;
+        justify-content: center;
+    }
+    .up p {
+        transform: rotate(180deg);
+        padding: 0;
+        margin: 0;
+    }
+    .up,
+    .down {
+        margin: 0 auto;
+    }
+    .left,
+    .right {
+        margin: 5px auto;
+    }
+    .left,
+    .right,
+    .up,
+    .down {
+        font-size: 35px;
+        color: white;
+        height: 40px;
+        width: 40px;
+        background-color: black;
+        border-radius: 10px;
+        line-height: 40px;
         box-shadow: 3px 3px rgba(68, 68, 68, .3);
         border: 3px solid rgba(68, 68, 68, .8);
     }
