@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #efefef;
+    overflow: hidden;
+}
+
+.start {
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    box-shadow: 3px 3px rgba(68, 68, 68, .3);
+    border: 3px solid rgba(68, 68, 68, .8);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.start:focus {
+    outline: none;
+}
+
+.start:hover {
+    background-color: gray;
+}
+
+.score {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.grid {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid gray;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.grid div {
+    width: 10%;
+    height: 10%;
+}
+
+.kenneth {
+    background-image: url('images/kenneth-head.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.peacock {
+    background-image: url('images/peacock.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn-wrapper {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .grid {
+        width: 250px;
+        height: 250px;
+    }
+    .btn-wrapper {
+        display: block;
+        margin: 30px auto;
+    }
+    .side-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        width: 300px;
+        justify-content: center;
+        margin-left: -20px;
+    }
+    .up p {
+        transform: rotate(180deg);
+        padding: 0;
+        margin: 0;
+    }
+    .up,
+    .down {
+        margin: 0 auto;
+    }
+    .left,
+    .right {
+        margin: 5px 30px;
+    }
+    .left,
+    .right,
+    .up,
+    .down {
+        font-size: 35px;
+        color: white;
+        height: 50px;
+        width: 50px;
+        background-color: black;
+        border-radius: 10px;
+        line-height: 50px;
+        box-shadow: 3px 3px rgba(68, 68, 68, .3);
+        border: 3px solid rgba(68, 68, 68, .8);
+    }
+    .left:hover,
+    .right:hover,
+    .up:hover,
+    .down:hover {
+        cursor: pointer;
+        background-color: gray;
+    }
+}
